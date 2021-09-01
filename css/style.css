@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
 /*
 Theme Name: KenzieFlix
 Author: Kenzie Academy
@@ -15,24 +64,100 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 */
 
 /* VARIÁVEIS */
+
 :root{
-  
-}
+		--background-color: #00002e;
+		--font: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		--color: #ffffff;
+	}
 
 /*BODY*/
-	body{
 
-	}
+		body{
+			background-color: var(--background-color);
+			font-family: var(--font);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+		}
 
 /*TOPO*/
-	header.topo{
-		
-	}
+
+		header.topo{
+			margin: 0px auto 15px 0px;
+		}
+		.topo figure figcaption {
+			display: none;
+		}
 
 /*RODAPÉ*/
-	
+		footer button {
+			margin: 0 auto;
+			border-radius: 6px;
+			cursor: pointer;
+			border: 3px solid #fff;
+			background-color: var(--background-color);
+			color: var(--color);
+			width: 185px;
+			padding: 13px;
+			font-size: 1.2rem;
+		}
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
-		
+
+		.pg-home figure figcaption {
+			display: none;
+		}
+		div.pg-home{
+			width: 100%;
+			text-align: center;
+		}
+	
+		.pg-home h2 {
+			color: var(--color);;
+			font-weight: bold;
+			font-size: 1.9rem;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 28px;
+		}
+		.pg-home h3 {
+			color: var(--color);;
+			margin-top: 15px;
+			font-size: 1.1rem;
+		}
+
+		.pg-home ul {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-bottom: 82px;
+		}
+		.pg-home ul li {
+			width: 186px;
+		}
+	
+		.user {
+			width: 150px;
+			margin: 12px 0px;
+		}
+		.addPerfil img {
+			width: 125px;
+			margin: 25px 0px 12px 0px;
+	}
+	@media 	(min-width: 400px) {
+		.pg-home h2{
+			font-size: 2.5rem;
+	}
+		.pg-home ul {
+			width: 858px;
+			margin: 0 auto;
+			align-items: center;
+		}
+		footer button {
+		margin-top: 40px;
+		}
 	}
